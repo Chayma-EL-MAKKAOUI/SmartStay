@@ -1,23 +1,27 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Papa from "papaparse"; 
 import "./ChatbotIcon.css";
-
-// Exemple de données en Darija pour les réponses du chatbot
-const chatbotData = [
-  { question: "salam", response: "Salam! Kif n3awnak?" },
-  { question: "hi", response: "Salam! Kif n3awnak?" },
-  { question: "prix", response: "Chno smiya dyal lmaison li bghiti tchouf?" },
-  { question: "thaman", response: "Chno smiya dyal lmaison li bghiti tchouf?" },
-  { question: "location", response: "Fin kayn lmaison li bghiti?" },
-  { question: "maison", response: "Shno smiya dyal lmaison li bghiti?" },
-  { question: "chambre", response: "Sh7al mn ghorfa f lmaison?" },
-  { question: "difficulté", response: "Ma fahmtch mzyan, shno bghiti?" },
-  { question: "merci", response: "3afak! Wach bghiti chi 7aja akhira?" }
-];
 
 const ChatbotIcon = () => {
   const [isChatbotOpen, setIsChatbotOpen] = useState(false);
   const [message, setMessage] = useState("");
   const [responses, setResponses] = useState([]);
+  const [chatbotData, setChatbotData] = useState([]); 
+
+  useEffect(() => {
+    Papa.parse("/darija_location.csv", {
+      download: true, 
+      complete: (result) => {
+        const data = result.data.map(row => ({
+          mot: row[0],        
+          traduction: row[1], 
+        }));
+        setChatbotData(data);
+        console.log(data); // Pour vérifier si les données sont bien chargées
+      },
+      header: false, 
+    });
+  }, []);
 
   const handleClick = () => {
     setIsChatbotOpen(!isChatbotOpen);
@@ -26,17 +30,20 @@ const ChatbotIcon = () => {
   const handleSendMessage = () => {
     if (message.trim()) {
       const userMessage = message;
-      setMessage(""); // Clear input field after sending message
+      setMessage(""); 
 
-      let chatbotResponse = "Ma fahmtch mzyan, shno bghiti?"; // Default response
+      let chatbotResponse = "Ma fahmtch mzyan, shno bghiti?"; 
 
-      // Cherche la réponse dans les données en Darija
-      const matchedData = chatbotData.find(data =>
-        userMessage.toLowerCase().includes(data.question)
+      // Séparer le message de l'utilisateur en mots individuels
+      const userWords = userMessage.toLowerCase().split(/\s+/);
+
+      // Trouver la première correspondance avec l'un des mots-clés
+      const matchedData = chatbotData.find(data => 
+        userWords.some(word => data.mot.toLowerCase().includes(word))
       );
 
       if (matchedData) {
-        chatbotResponse = matchedData.response;
+        chatbotResponse = matchedData.traduction;
       }
 
       setResponses([
@@ -44,6 +51,12 @@ const ChatbotIcon = () => {
         { sender: "user", text: userMessage },
         { sender: "chatbot", text: chatbotResponse },
       ]);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter") {
+      handleSendMessage();
     }
   };
 
@@ -72,9 +85,10 @@ const ChatbotIcon = () => {
             <div className="chatbot-footer">
               <input
                 type="text"
-                placeholder="S2al li bghiti"
+                placeholder="Sowl li bghiti"
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                onKeyDown={handleKeyDown} 
               />
               <i className="fa-solid fa-paper-plane" onClick={handleSendMessage}></i>
             </div>
