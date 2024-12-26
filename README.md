@@ -69,10 +69,4 @@ Pour entraîner un nouveau modèle, suivez ces étapes dans `app.py` :
 
 ---
 
-## Contribution
-
-Les contributions sont les bienvenues ! N'hésitez pas à soumettre des demandes de fusion ou à ouvrir des issues pour signaler des bugs ou suggérer des améliorations.
-
----
-
 
