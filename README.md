@@ -1,7 +1,3 @@
-Voici une suggestion de description pour votre projet GitHub intitulé "🏠 Système de Recommandation de Locations avec K-Nearest Neighbors". Elle inclut des instructions sur la façon d'entraîner le modèle et de lancer l'application Streamlit.
-
----
-
 # 🏠 Système de Recommandation de Locations avec K-Nearest Neighbors
 
 Ce projet est un système de recommandation pour aider les utilisateurs à trouver des propriétés locatives basées sur leurs préférences. Il utilise un algorithme K-Nearest Neighbors (KNN) pour calculer la similarité entre les propriétés et fournir des suggestions pertinentes.
@@ -85,4 +81,3 @@ Ce projet est sous licence [MIT](LICENSE).
 
 ---
 
-Si vous avez besoin d'aide pour des sections spécifiques, faites-le-moi savoir. 😊
