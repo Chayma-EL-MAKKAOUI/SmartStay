@@ -75,9 +75,4 @@ Les contributions sont les bienvenues ! N'hésitez pas à soumettre des demandes
 
 ---
 
-## Licence
-
-Ce projet est sous licence [MIT](LICENSE).
-
----
 
