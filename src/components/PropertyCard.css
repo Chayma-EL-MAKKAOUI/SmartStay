@@ -1,0 +1,45 @@
+.property-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 10px;
+  width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s;
+}
+
+.property-card:hover {
+  transform: translateY(-5px);
+}
+
+.property-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.favorite-icon {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 24px;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.favorite-icon:hover {
+  color: #e63946;
+}
+
+.favorite-icon.favorited {
+  color: #e63946;
+}
+
+.property-price {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}

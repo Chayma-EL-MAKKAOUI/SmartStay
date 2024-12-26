@@ -1,0 +1,61 @@
+{
+    "properties": [
+      {
+        "id": 1,
+        "name": "Appartement",
+        "location": "Casablanca",
+        "price": "3000 MAD",
+        "image": "https://th.bing.com/th/id/OIP.sYVg0ujTrj1sVqPXwbEjZgHaE8?rs=1&pid=ImgDetMain"
+      },
+      {
+        "id": 2,
+        "name": "Appartement",
+        "location": "Berkane",
+        "price": "2000 MAD",
+        "image": "https://static.trip101.com/paragraph_media/pictures/002/603/729/large/f907459b-4048-46a0-b159-60aabd733bd0.jpg?1649698997"
+      },
+      {
+        "id": 3,
+        "name": "Appartement",
+        "location": "Berkane",
+        "price": "1500 MAD",
+        "image": "https://th.bing.com/th/id/OIP.sYVg0ujTrj1sVqPXwbEjZgHaE8?rs=1&pid=ImgDetMain"
+      },
+      {
+        "id": 4,
+        "name": "Appartement",
+        "location": "Berkane",
+        "price": "2500 MAD",
+        "image": "https://i.ytimg.com/vi/AVR1uLjRWnY/maxresdefault.jpg"
+      },
+      {
+        "id": 5,
+        "name": "Appartement",
+        "location": "Béni Mellal",
+        "price": "500 MAD",
+        "image": "https://www.masaken.ma/ad/6303/67671ea3dfaf5.jpeg"
+      },
+      {
+        "id": 6,
+        "name": "Chambre",
+        "location": "Béni Mellal",
+        "price": "600 MAD",
+        "image": "https://th.bing.com/th/id/R.6bc2d92da6a2357d102f05cfaf98b921?rik=L8UfPQ1X56EiZg&pid=ImgRaw&r=0"
+      },
+      {
+        "id": 7,
+        "name": "Chambre",
+        "location": "Casablanca",
+        "price": "1500 MAD",
+        "image": "https://images.dubizzle.com.lb/thumbnails/8302133-800x600.jpeg"
+      },
+      {
+        "id": 8,
+        "name": "Appartement",
+        "location": "Casablanca",
+        "price": "2500 MAD",
+        "image": "https://th.bing.com/th/id/R.258a150a418666c31b94ddb914576fba?rik=GJFnQfat238YRg&pid=ImgRaw&r=0"
+      }
+    ]
+  }
+  
