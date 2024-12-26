@@ -13,10 +13,13 @@
     "axios": "^1.7.9",
     "chokidar": "^4.0.3",
     "cra-template": "1.2.0",
+    "papaparse": "^5.4.1",
     "react": "^19.0.0",
+    "react-chatbot-kit": "^2.2.2",
     "react-dom": "^19.0.0",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1"
+    "react-scripts": "^3.0.1",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",

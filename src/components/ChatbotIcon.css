@@ -1,23 +1,98 @@
 .chatbot-icon {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #023E8A;
-    color: white;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-    font-size: 28px;
-    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-  }
-  
-  .chatbot-icon:hover {
-    background-color: #EC8305;
-    transform: scale(1.1);
-  }
-  
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #023E8A;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 28px;
+  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.chatbot-icon:hover {
+  background-color: #EC8305;
+  transform: scale(1.1);
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  height: 400px;
+  background-color: #E4E0E1;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.chatbot-header i {
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.chatbot-body {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.message {
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+  max-width: 70%;
+}
+
+.user-message {
+  align-self: flex-end;
+  background-color: #023e8a;
+  color: white;
+}
+
+.chatbot-message {
+  align-self: flex-start;
+  background-color: #f1f1f1;
+}
+
+.chatbot-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.chatbot-footer input {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  flex-grow: 1;
+}
+
+.chatbot-footer i {
+  font-size: 24px;
+  cursor: pointer;
+  color: #EC8305;
+}
